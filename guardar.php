@@ -47,14 +47,14 @@
 	}
 
 	function registrar($nombre, $apellidos, $dni, $conexion){
-		$query = "INSERT INTO usuario VALUES(0, '$nombres', '$apellidos', '$dni', 1);";
+		$query = "INSERT INTO usuario VALUES(0, '$nombre', '$apellidos', '$dni', 1);";
 		$resultado = mysqli_query($conexion, $query);		
 		verificar_resultado($resultado);
 		cerrar($conexion);
 	}
 
 	function modificar($nombre, $apellidos, $dni, $idusuario, $conexion){	
-		$query= "UPDATE usuario SET 	nombre='$nombres', 
+		$query= "UPDATE usuario SET 	nombre='$nombre', 
 										apellidos='$apellidos', 
 										dni='$dni' 
 								WHERE   idusuario=$idusuario";
@@ -64,7 +64,7 @@
 	}
 
 	function eliminar($idusuario, $conexion){
-		$query = "UPDATE usuario SET estado = 0 WHERE idusuario = $idusuarios";
+		$query = "UPDATE usuario SET estado = 0 WHERE idusuario = $idusuario";
 		$resultado = mysqli_query($conexion, $query);
 		verificar_resultado( $resultado );
 		cerrar( $conexion );

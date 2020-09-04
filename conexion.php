@@ -9,4 +9,3 @@
 		die('Error de Conexión: ' . mysqli_connect_errno());	
 	}
 ?>
-

@@ -59,12 +59,13 @@
 			</div>
 			<div class="table-responsive col-sm-12">		
 				<table id="dt_cliente" class="table table-bordered table-hover" cellspacing="0" width="100%">
+					<caption>Listado de usuarios</caption>
 					<thead>
 						<tr>								
-							<th>Nombre</th>
-							<th>Apellidos</th>
-							<th>Dni</th>
-							<th></th>											
+							<th scope="col">Nombre</th>
+							<th scope="col">Apellidos</th>
+							<th scope="col">Dni</th>
+							<th scope="col"></th>											
 						</tr>
 					</thead>					
 				</table>
@@ -185,7 +186,7 @@
 		}
 
 		var limpiar_datos = function(){
-			$("#opcion").val("registra");
+			$("#opcion").val("registrar");
 			$("#idusuario").val("");
 			$("#nombre").val("").focus();
 			$("#apellidos").val("");
@@ -193,8 +194,8 @@
 		}
 
 		var listar = function(){
-				$("#cuadro2").slideUp("slow")
-				$("#cuadro1").slideDown("slow")
+				$("#cuadro2").slideUp("slow");
+				$("#cuadro1").slideDown("slow");
 			var table = $("#dt_cliente").DataTable({
 				//"processing": true,
 				//"serverSide": true,
@@ -298,6 +299,8 @@
 		        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
 		    }
 		}
+		
+
 	</script>
 </body>
 </html>

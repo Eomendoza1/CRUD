@@ -26,7 +26,7 @@ $resultado = mysqli_query($conexion, $query);
 $total = mysqli_fetch_assoc( $resultado )["total"];
 
 /*CONSULTA GENERAL DE LOS REGISTROS*/
-$query = "SELECT * FROM usuarios WHERE estado = 1 LIMIT $start, $fin;";
+$query = "SELECT * FROM usuario WHERE estado = 1 LIMIT $start, $fin;";
 $resultado = mysqli_query($conexion, $query);
 
 if( !$resultado ){
