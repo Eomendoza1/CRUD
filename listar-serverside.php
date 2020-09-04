@@ -12,13 +12,13 @@ $total = -1;
 
 /*CONDICIONES PARA LA PAGINACIÓN*/
 if ($start != null) {
-	if ($start < 0)
-		$start = 0;
+	if ($start < 0){
+		$start = 0;}
 }
 if ($length != null) {
 	$fin = $length;
-	if ($fin < 10 || $fin > 50)
-		$fin = 10;
+	if ($fin < 10 || $fin > 50){
+		$fin = 10;}
 }
 /*CONSULTA PARA OBTENER EL TOTAL DE REGISTROS*/
 $query = "SELECT COUNT(idusuario) AS total FROM usuario WHERE estado = 1;";
